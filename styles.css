@@ -23,7 +23,8 @@ body {
     hsl(252, 100%, 67%),
     hsl(241, 81%, 54%)
   );
-  border-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
 
   display: flex;
   flex-direction: column;
