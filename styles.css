@@ -12,7 +12,14 @@
 
 body {
   width: 100%;
+  height: 100%;
   font-family: "HankenGrotesk";
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .blue-container {
@@ -28,7 +35,7 @@ body {
 
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
 
   text-align: center;
@@ -42,8 +49,8 @@ body {
     hsla(256, 72%, 46%, 1),
     hsla(241, 72%, 46%, 0)
   );
-  width: 100px;
-  height: 100px;
+  width: 125px;
+  height: 125px;
   border-radius: 50%;
 
   display: flex;
@@ -60,7 +67,19 @@ body {
 /* ------------------------------------ */
 
 .xxl {
-  font-size: xx-large;
+  font-size: xxx-large;
+}
+
+.xl {
+  font-size: x-large;
+}
+
+.l {
+  font-size: large;
+}
+
+.m {
+  font-size: medium;
 }
 
 .sm {
@@ -84,7 +103,7 @@ body {
 }
 
 .shadowed {
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2);
 }
 
 .font500 {
@@ -104,7 +123,7 @@ body {
 .summary-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   height: 433px;
   width: 375px;
@@ -142,6 +161,14 @@ button {
 
   background-color: hsl(224, 30%, 27%);
   color: white;
+}
+
+button:hover {
+  background: linear-gradient(
+    to bottom,
+    hsl(252, 100%, 67%),
+    hsl(241, 81%, 54%)
+  );
 }
 
 span {
@@ -186,4 +213,40 @@ span {
 
 .bgCobaltBlue {
   background-color: hsla(234, 85%, 45%, 0.1);
+}
+
+/* --------------------------------------------- */
+
+@media (width >= 1000px) {
+  body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .boxShadow {
+    display: flex;
+    flex-direction: row;
+    border-radius: 25px;
+
+    box-shadow: 10px 15px 20px hsla(234, 85%, 45%, 0.1);
+  }
+
+  .blue-container {
+    height: 433px;
+    width: 310px;
+    border-radius: 25px;
+    padding: 0px 60px;
+  }
+
+  .circle-gradient {
+    width: 150px;
+    height: 150px;
+  }
+
+  .summary-container {
+    width: 310px;
+  }
 }
